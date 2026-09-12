@@ -3,7 +3,8 @@ import Logo from '../assets/logo-text.png'
 import "./Nav.css";
 const Nav = () => {
     return (
-        <nav className='flex justify-between items-center mx-25 my-5'>
+        
+        <nav className='flex justify-between items-center mx-20 my-5 pb-3 sticky top-0 z-50 bg-white w-100%'>
           <button className="md:hidden text-2xl">
   ☰
 </button>
@@ -20,6 +21,7 @@ const Nav = () => {
                <button className="btn rounded-full bg-[#D91B7E] text-white px-6 hover:border-gray-400 ">Sign Up</button>
             </div>
         </nav>
+     
     );
 };
 
