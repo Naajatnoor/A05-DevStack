@@ -1,4 +1,6 @@
 @import "tailwindcss";
 @plugin "daisyui";
 
-
+.Footer,h1{
+  font-weight: bold;
+}
