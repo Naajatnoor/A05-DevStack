@@ -1,10 +1,10 @@
 import React from 'react';
-import './footer.css'
+import './Footer.css'
 import Logo from '../assets/logo-text.png'
 const Footer = () => {
     return (
         <footer className=''>       
-        <section className="flex justify-between items-top mx-10 border-b-1 border-gray-200 border-t-1  pt-5 ">
+        <section className="flex justify-between items-start mx-10 border-b-1 border-gray-200 border-t-1  pt-5  px-10">
             <div className='pb-5'>
                  <img src={Logo} alt="" />
 
@@ -20,11 +20,6 @@ const Footer = () => {
             </div>
 
             <div>
-                {/* <h1> {
-                    constructor(parameters) {
-                        
-                    }
-                }>PRODUCT</h1> */}
                 <h1 className=" font-[600]  py-[20px]">PRODUCT</h1>
             <ul >
                 <li>Home</li>
@@ -43,8 +38,7 @@ const Footer = () => {
         </div>
 
         <div>
-                <h1 className=" font-[600] py-[20px]">PRODUCT</h1>
-                <h1  >LEGAL</h1>
+                <h1 className=" font-[600] py-[20px]">LEGAL</h1>
             <ul>
                 <li>Privacy Policy</li>
                 <li>Terms of Service</li>

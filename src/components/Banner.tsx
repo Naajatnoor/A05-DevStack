@@ -2,8 +2,8 @@ import React from 'react';
 import bannerPic from '../assets/banner-stack.png'
 const Banner = () => {
     return (
-        <section className='flex justify-between items-center '>
-            <div className='px-30'>
+        <section className='flex flex-col md:flex-row justify-between items-center '>
+            <div className='px-5 md:px-10 lg:px-30 py-10'>
             <h1 className='text-[50px]  font-extrabold text-[#0F172A]'>Build your Ideal</h1>
             <h1 className='text-[50px]  font-extrabold bg-linear-to-r from-[#FF5722] via-[#D81B7E] to-[#7C3AED] bg-clip-text text-transparent'>Development Stack</h1>
                  <p className='text-[18px] mx-1 my-6 text-[#475569]'>Explore frontend, backend, database, and tooling options,<br />
