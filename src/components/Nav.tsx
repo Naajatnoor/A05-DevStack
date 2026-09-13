@@ -17,8 +17,8 @@ const Nav = () => {
                 <li><a href="#">Contact</a></li>
             </ul>
             <div className=' flex gap-2.5'>
-               <button className="btn rounded-full bg-white px-6 text-[#334155]">Sign in</button>
-               <button className="btn rounded-full bg-[#D91B7E] text-white px-6 hover:border-gray-400 ">Sign Up</button>
+               <button className="btn rounded-full bg-white px-5 text-[#334155]">Sign in</button>
+               <button className="btn rounded-full bg-[#D91B7E] text-white px-5 hover:border-gray-400 ">Sign Up</button>
             </div>
         </nav>
      
