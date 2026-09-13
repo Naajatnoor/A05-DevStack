@@ -4,12 +4,12 @@ import Logo from '../assets/logo-text.png'
 const Footer = () => {
     return (
         <footer className=''>       
-        <section className="flex justify-between items-start mx-10 border-b-1 border-gray-200 border-t-1  pt-5  px-10">
+        <section className="flex flex-col md:flex-row justify-between items-start gap-8 md:gap-5 mx-4 md:mx-10 border-b border-gray-200 border-t pt-5 px-5 md:px-10">
             <div className='pb-5'>
                  <img src={Logo} alt="" />
 
-                 <p className='py-8 text-[#3a3b3c]'>Curated tools, technologies, and resources for developers building
-                 <br /> modern software.</p>
+                 <p className='py-6 md:py-8 text-[#3a3b3c]'>Curated tools, technologies, and resources for developers building
+                 <br  className="hidden md:block" /> modern software.</p>
 
                   <ul className='flex gap-3  font-mono'>
                     <li><a href="#">GitHub</a></li>
@@ -20,7 +20,7 @@ const Footer = () => {
             </div>
 
             <div>
-                <h1 className=" font-[600]  py-[20px]">PRODUCT</h1>
+                <h1 className=" font-[600] py-3 md:py-[20px]">PRODUCT</h1>
             <ul >
                 <li>Home</li>
                 <li>Technologies</li>
@@ -29,7 +29,7 @@ const Footer = () => {
         </div>
 
         <div>
-                <h1 className=" font-[600]  py-[20px]" >COMPANY</h1>
+                <h1 className=" font-[600] py-3 md:py-[20px]" >COMPANY</h1>
             <ul>
                 <li>About</li>
                 <li>Contact</li>
@@ -38,7 +38,7 @@ const Footer = () => {
         </div>
 
         <div>
-                <h1 className=" font-[600] py-[20px]">LEGAL</h1>
+                <h1 className="font-[600] py-3 md:py-[20px]">LEGAL</h1>
             <ul>
                 <li>Privacy Policy</li>
                 <li>Terms of Service</li>
@@ -46,7 +46,7 @@ const Footer = () => {
         </div>
 
         </section>
-        <section className='flex justify-between items-center mx-12 my-6 text-[13px]'>
+        <section className='flex flex-col md:flex-row justify-between items-center gap-3 mx-5 md:mx-12 my-6 text-[13px]'>
             <p>© 2026 Dev Stack. All rights reserved.</p>
             <div className='flex gap-4 '>
                 <p>Privacy</p>

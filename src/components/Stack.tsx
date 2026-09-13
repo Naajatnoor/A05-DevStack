@@ -14,7 +14,7 @@ const Stack = ({ stack, setStack }: StackProps) => {
     };
 
     return (
-        <div className=' border p-10 m-4 md: border-gray-200 shadow rounded-xl p-5 sticky top-20'>
+        <div className=' border p-8 m-4 md: border-gray-200 shadow rounded-xl p-5 sticky top-20'>
 
             <div className='mb-5'>
                 <h2 className='text-xl font-bold '>

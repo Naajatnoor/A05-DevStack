@@ -8,6 +8,14 @@ interface TechnologyCardProps {
     setStack: React.Dispatch<React.SetStateAction<Technology[]>>;
 }
 
+const badgeColors: Record<string, string> = {
+    Popular: "bg-blue-100 text-blue-700",
+    Fast: "bg-orange-100 text-orange-700",
+    Essential: "bg-green-100 text-green-700",
+    "Top SQL": "bg-indigo-100 text-indigo-700",
+    Containers: "bg-cyan-100 text-cyan-700",
+    Cloud: "bg-purple-100 text-purple-700",
+};
 const TechnologyCard = ({ technologyPromise,stack,setStack }: TechnologyCardProps) => {
 
     const technology = use(technologyPromise);
@@ -18,7 +26,9 @@ const TechnologyCard = ({ technologyPromise,stack,setStack }: TechnologyCardProp
             {technology.map((tech) => (
                 <div
                     key={tech.id}
-                    className='border border-gray-200  rounded-xl p-5 shadow-sm'
+                    className='border border-gray-200 rounded-xl p-5 shadow-sm
+    transition-all duration-300 ease-in-out
+    hover:-translate-y-1 hover:shadow-xl hover:border-pink-200'
                 >
 
                      <div className='flex justify-between items-center'>
@@ -28,7 +38,7 @@ const TechnologyCard = ({ technologyPromise,stack,setStack }: TechnologyCardProp
                             alt={tech.name}
                         />
 
-                        <span className='px-3 py-1 rounded-full text-sm bg-gray-100'>
+                        <span className={`px-3 py-1 rounded-full text-sm  ${badgeColors[tech.badge]}`}>
                             {tech.badge}
                         </span>
                     </div>
