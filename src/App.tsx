@@ -3,7 +3,8 @@ import Banner from "./components/Banner"
 import Footer from "./components/Footer"
 import Technology from "./components/Technology/Technology";
 import type { Technology as TechnologyType } from "./type";
-import { Suspense } from "react";
+import { Suspense, useState } from "react";
+import { ToastContainer } from "react-toastify";
 
 
 const technologyFetch = async (): Promise<TechnologyType[]> => {
@@ -16,17 +17,18 @@ const technologyFetch = async (): Promise<TechnologyType[]> => {
 function App() {
 
  const technologyPromise = technologyFetch();
+ const [stack, setStack] = useState<TechnologyType[]>([]);
 
   return (
     <>
-    
+         <ToastContainer  position="bottom-right"/>
       <Nav></Nav>
       <Banner></Banner>
-      <Suspense fallback={<h2>Loading...</h2>}>
-                <Technology technologyPromise={technologyPromise}></Technology>
-            </Suspense>
-      {/* <Technology technologyPromise={technologyPromise }></Technology> */}
-                 <Footer></Footer>
+      <Suspense fallback={<h1></h1>}>
+      <Technology technologyPromise={technologyPromise}    stack={stack}
+       setStack={setStack}></Technology>
+       </Suspense>
+       <Footer></Footer>
 
     </>
   )

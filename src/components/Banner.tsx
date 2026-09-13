@@ -11,7 +11,7 @@ const Banner = () => {
                  next project.</p>
                
                  <div className='flex gap-3'>
-                   <button className="btn rounded-[8px] bg-linear-to-r from-[#F97316] to-[#EC4899] px-8 text-white">Explore Technologies</button>
+                   <button className="btn rounded-[8px] bg-linear-to-r from-[#FF5722] to-[#D81B7E] px-8 text-white">Explore Technologies</button>
                    <button className="btn rounded-[8px] px-16 text-[#374151]">Learn More</button>
                    </div>
                </div>

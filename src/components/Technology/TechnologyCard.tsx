@@ -1,19 +1,20 @@
 import React, { use } from 'react';
 import type { Technology } from '../../type';
+import {toast} from "react-toastify"
 
 interface TechnologyCardProps {
     technologyPromise: Promise<Technology[]>;
+     stack: Technology[];
+    setStack: React.Dispatch<React.SetStateAction<Technology[]>>;
 }
 
-const TechnologyCard = ({ technologyPromise }: TechnologyCardProps) => {
+const TechnologyCard = ({ technologyPromise,stack,setStack }: TechnologyCardProps) => {
 
     const technology = use(technologyPromise);
 
-    // console.log(technology, "technology");
-
     return (
      <div> 
-        <div className='grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5 mx-20 mb-20'>
+        <div className='grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5 mb-20 '>
             {technology.map((tech) => (
                 <div
                     key={tech.id}
@@ -35,14 +36,23 @@ const TechnologyCard = ({ technologyPromise }: TechnologyCardProps) => {
                     <h2  className='text-xl font-bold mt-4'>{tech.name}</h2>
 
                     <p className='text-gray-500 my-2'>{tech.description}</p>
-                <div className='border-t-1 border-gray-100 flex justify-between items-center py-3'>
-                    <p className=' px-3 p-2 rounded-[8px] bg-gray-100 text-sm'>{tech.category}</p>
+                <div className='border-t-1 border-gray-100 flex justify-between items-center py-3 gap-1'>
+                    <p className='  p-2 rounded-[8px] bg-gray-100 text-sm'>{tech.category}</p>
                     <p>{tech.difficulty}</p>
                     <p className='text-sm' >⭐ {tech.rating}</p>
                     </div>
-                     <button className='btn w-full mt-5 rounded-lg bg-black text-white'>
-                        Add to Stack
-                    </button>
+                    
+
+        <button className='btn w-full mt-5 rounded-lg bg-black text-white'
+         onClick={() => { const alreadyAdded = stack.some(item => item.id === tech.id);
+          if (!alreadyAdded)
+           { setStack([...stack, tech]); 
+           toast.success(`${tech.name} added to stack`); 
+           } 
+           else { 
+            toast.error(`${tech.name} is already added`);
+             } 
+             }} > Add to Stack </button>
                 </div>
             ))}
         </div>

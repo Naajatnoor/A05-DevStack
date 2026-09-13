@@ -1,10 +1,11 @@
 import React from 'react';
 import Logo from '../assets/logo-text.png'
-import "./Nav.css";
+
 const Nav = () => {
     return (
-        
-        <nav className='flex justify-between items-center mx-20 my-5 pb-3 sticky top-0 z-50 bg-white w-100%'>
+       <nav className=' bg-white
+          sticky top-0 '>
+        <div className='flex justify-between items-center mx-20 py-5 '>
           <button className="md:hidden text-2xl">
   ☰
 </button>
@@ -20,8 +21,8 @@ const Nav = () => {
                <button className="btn rounded-full bg-white px-5 text-[#334155]">Sign in</button>
                <button className="btn rounded-full bg-[#D91B7E] text-white px-5 hover:border-gray-400 ">Sign Up</button>
             </div>
-        </nav>
-     
+        </div>
+     </nav> 
     );
 };
 
