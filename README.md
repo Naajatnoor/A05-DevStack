@@ -8,7 +8,7 @@ Users can then select their preferred technologies and add them to their own sta
 
 ## Live Demo
 
-🔗 **Live Website:** inquisitive-yeot-ada563.netlify.app
+🔗 **Live Website:** https://inquisitive-yeot-ada563.netlify.app/
 🔗 **Live Website:** https://devstack-sooty-gamma.vercel.app
 
 ## GitHub Repository
