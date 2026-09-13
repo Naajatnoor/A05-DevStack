@@ -47,8 +47,8 @@ const TechnologyCard = ({ technologyPromise,stack,setStack }: TechnologyCardProp
 
                     <p className='text-gray-500 my-2'>{tech.description}</p>
                 <div className='border-t-1 border-gray-100 flex justify-between items-center py-3 gap-1'>
-                    <p className='  p-2 rounded-[8px] bg-gray-100 text-sm'>{tech.category}</p>
-                    <p>{tech.difficulty}</p>
+                    <p className='  p-2 rounded-[4px] bg-gray-100 text-[12px]'>{tech.category}</p>
+                    <p className='text-[14px]'>{tech.difficulty}</p>
                     <p className='text-sm' >⭐ {tech.rating}</p>
                     </div>
                     
